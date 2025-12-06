@@ -132,6 +132,21 @@
     .hobby-list li + li {
       margin-top: 4px;
     }
+    
+    /* Stack hobbies vertically on small screens */
+    @media (max-width: 600px) {
+      .hobby-grid {
+        flex-direction: column;
+        align-items: center;  /* center each card */
+      }
+
+      .hobby-card {
+        flex: 0 0 auto;       /* don't stretch weirdly */
+        width: 100%;
+        max-width: 260px;     /* controls how big a card can get */
+      }
+    }
+
   </style>
   <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
