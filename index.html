@@ -149,28 +149,19 @@
 
     /* Sublist for medals */
     .medal-sublist {
-    list-style: none;       /* remove normal bullets */
-    margin-left: 0.8rem;
+    list-style: none;       /* remove default bullets */
+    margin-left: 0.6rem;    /* indent under parent bullet */
     padding-left: 0;
     }
 
-    .medal-sublist li {
-    position: relative;
-    padding-left: 1.4rem;   /* space for the emoji */
+    /* Silver medal marker */
+    .medal-sublist li.silver::marker {
+    content: "-";
     }
 
-    /* Silver medal */
-    .medal-sublist li.silver::before {
-    content: "–";
-    position: absolute;
-    left: 0;
-    }
-
-    /* Bronze medal */
-    .medal-sublist li.bronze::before {
-    content: "–";
-    position: absolute;
-    left: 0;
+    /* Bronze medal marker */
+    .medal-sublist li.bronze::marker {
+    content: "-";
     }
   </style>
   <!--[if lt IE 9]>
