@@ -124,7 +124,7 @@
 
     .hobby-list {
       margin-top: 12px;
-      padding-left: 0.8rem;
+      padding-left: 1.2rem;
       text-align: left;
       font-size: 0.92rem;
     }
@@ -147,22 +147,31 @@
       }
     }
 
-    /* Sublist for medals */
     .medal-sublist {
-    list-style: none;       /* remove default bullets */
-    margin-left: 0.6rem;    /* indent under parent bullet */
+    list-style: none;       /* remove normal bullets */
+    margin-left: 0.8rem;
     padding-left: 0;
     }
 
-    /* Silver medal marker */
-    .medal-sublist li.silver::marker {
-    content: "– ";
+    .medal-sublist li {
+    position: relative;
+    padding-left: 1.4rem;   /* space for the emoji */
     }
 
-    /* Bronze medal marker */
-    .medal-sublist li.bronze::marker {
-    content: "– ";
+    /* Silver medal */
+    .medal-sublist li.silver::before {
+    content: "🥈";
+    position: absolute;
+    left: 0;
     }
+
+    /* Bronze medal */
+    .medal-sublist li.bronze::before {
+    content: "🥉";
+    position: absolute;
+    left: 0;
+    }
+
   </style>
   <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -226,9 +235,9 @@
             <li>Organized 10+ intraschool bridge tournaments since 2023</li>
             <li>Medaled at multiple national events
                 <ul class="medal-sublist">
-                <li class="silver">🥈 2023 China Bridge Championships</li>
-                <li class="bronze">🥉 2024 China Youth Bridge Teams Championship (U30)</li>
-                <li class="bronze">🥉 2025 China Youth Bridge Teams Championship (U26 Women's)</li>
+                <li class="silver">2023 China Bridge Championships</li>
+                <li class="bronze">2024 China Youth Bridge Teams Championship (U30)</li>
+                <li class="bronze">2025 China Youth Bridge Teams Championship (U26 Women's)</li>
                 </ul>
             </li>
                
