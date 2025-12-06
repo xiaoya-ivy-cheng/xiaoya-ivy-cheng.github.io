@@ -65,6 +65,73 @@
       .wrapper { padding: 16px; }
       .headshot { width: 128px; height: 128px; }
     }
+
+    /* Hobbies dropdown styling */
+    .hobby-grid {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 16px;
+    }
+
+    .hobby-card {
+      max-width: 220px;
+      flex: 1 1 160px;
+    }
+
+    .hobby-card details {
+      background: var(--card);
+      border-radius: 12px;
+      padding: 12px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,.06);
+      cursor: pointer;
+      transition: box-shadow 0.2s ease;
+    }
+
+    .hobby-card details:hover {
+      box-shadow: 0 4px 16px rgba(0,0,0,.12);
+    }
+
+    /* Hide default triangle marker */
+    .hobby-card summary {
+      list-style: none;
+    }
+    .hobby-card summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .hobby-image {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 8px;
+      transition: transform 0.25s ease;
+    }
+
+    /* Subtle zoom on hover */
+    .hobby-card:hover .hobby-image {
+      transform: scale(1.04);
+    }
+
+    .hobby-title {
+      font-weight: 600;
+      font-size: 1rem;
+      margin-bottom: 6px;
+    }
+
+    .hobby-list {
+      margin-top: 12px;
+      padding-left: 1.2rem;
+      text-align: left;
+      font-size: 0.92rem;
+    }
+
+    .hobby-list li + li {
+      margin-top: 4px;
+    }
   </style>
   <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -109,6 +176,58 @@
           arXiv preprint; abstract submitted to <i><span style="white-space: nowrap;">APS March Meeting 2026</span></i> (presenter).
         </li>
       </ul>
+
+    <p class="section-title">Hobbies</p>
+
+    <div class="hobby-grid">
+
+        <!-- Bridge -->
+        <div class="hobby-card">
+        <details>
+            <summary>
+            <img class="hobby-image" src="bridge.jpg" alt="Bridge" />
+            <div class="hobby-title">Bridge</div>
+            </summary>
+
+            <ul class="hobby-list">
+            <li>Member, Beijing Junior Bridge Team</li>
+            <li>Multiple national youth medals</li>
+            <li>President of PKU Bridge Association (4 terms)</li>
+            </ul>
+        </details>
+        </div>
+
+        <!-- Skating -->
+        <div class="hobby-card">
+        <details>
+            <summary>
+            <img class="hobby-image" src="skating.jpg" alt="Skating" />
+            <div class="hobby-title">Skating</div>
+            </summary>
+
+            <ul class="hobby-list">
+            <li>[Skating achievement 1]</li>
+            <li>[Skating achievement 2]</li>
+            </ul>
+        </details>
+        </div>
+
+        <!-- Piano -->
+        <div class="hobby-card">
+        <details>
+            <summary>
+            <img class="hobby-image" src="piano.jpg" alt="Piano" />
+            <div class="hobby-title">Piano</div>
+            </summary>
+
+            <ul class="hobby-list">
+            <li>Accompanist for PKU Physics Department Choir</li>
+            <li>[Add recital/experience if you want]</li>
+            </ul>
+        </details>
+        </div>
+
+    </div>
 
       <p class="meta" aria-label="last-updated">Last updated: December 2025</p >
     </main>
